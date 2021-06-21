@@ -26,7 +26,7 @@
       "tags": []
     },
     "nx-angular-next": {
-      "tags": []
+      "tags": ["scope: nx-angular-next"]
     },
     "nx-angular-next-e2e": {
       "tags": [],
