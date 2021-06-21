@@ -29,7 +29,7 @@
       "tags": ["scope: nx-angular-next"]
     },
     "nx-angular-next-e2e": {
-      "tags": [],
+      "tags": ["scope: nx-angular-next-e2e"],
       "implicitDependencies": ["nx-angular-next"]
     }
   }
