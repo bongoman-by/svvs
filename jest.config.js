@@ -1,3 +1,7 @@
 module.exports = {
-  projects: ['<rootDir>/apps/nx-angular-next', '<rootDir>/apps/api'],
+  projects: [
+    '<rootDir>/apps/nx-angular-next',
+    '<rootDir>/apps/api',
+    '<rootDir>/apps/admin',
+  ],
 };
