@@ -19,6 +19,13 @@
     }
   },
   "projects": {
+    "admin": {
+      "tags": ["scope: admin"]
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin"]
+    },
     "api": {
       "tags": []
     },
