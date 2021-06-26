@@ -27,7 +27,7 @@
       "implicitDependencies": ["admin"]
     },
     "api": {
-      "tags": ["type: app"]
+      "tags": ["scope: api", "type: app"]
     },
     "api-interfaces": {
       "tags": []
