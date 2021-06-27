@@ -18,7 +18,10 @@
             "tsConfig": "apps/admin/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-            "styles": ["apps/admin/src/styles.scss"],
+            "styles": ["apps/admin/src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/admin/src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -204,7 +207,10 @@
               "apps/nx-angular-next/src/favicon.ico",
               "apps/nx-angular-next/src/assets"
             ],
-            "styles": ["apps/nx-angular-next/src/styles.scss"],
+            "styles": ["apps/nx-angular-next/src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/nx-angular-next/src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
