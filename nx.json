@@ -38,6 +38,9 @@
     "nx-angular-next-e2e": {
       "tags": ["scope: nx-angular-next-e2e"],
       "implicitDependencies": ["nx-angular-next"]
+    },
+    "ui-component": {
+      "tags": ["scope: ui-lib", "type: lib"]
     }
   }
 }

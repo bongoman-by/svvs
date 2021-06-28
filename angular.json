@@ -18,7 +18,10 @@
             "tsConfig": "apps/admin/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-            "styles": ["apps/admin/src/styles.scss"],
+            "styles": ["apps/admin/src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/admin/src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -204,7 +207,10 @@
               "apps/nx-angular-next/src/favicon.ico",
               "apps/nx-angular-next/src/assets"
             ],
-            "styles": ["apps/nx-angular-next/src/styles.scss"],
+            "styles": ["apps/nx-angular-next/src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/nx-angular-next/src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -303,6 +309,38 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/nx-angular-next-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ui-component": {
+      "projectType": "library",
+      "root": "libs/ui-component",
+      "sourceRoot": "libs/ui-component/src",
+      "prefix": "svvs",
+      "architect": {
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["ws-style"]
+            }
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-component"],
+          "options": {
+            "jestConfig": "libs/ui-component/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-component/src/**/*.ts",
+              "libs/ui-component/src/**/*.html"
+            ]
           }
         }
       }

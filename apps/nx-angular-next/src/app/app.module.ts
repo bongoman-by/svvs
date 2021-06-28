@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { UiComponentModule } from '@svvs/ui-component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, UiComponentModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -24,13 +24,15 @@
               {
                 "sourceTag": "scope:nx-angular-next",
                 "onlyDependOnLibsWithTags": [
-                  "scope:nx-angular-next"
+                  "scope:nx-angular-next",
+                  "type:lib"
                 ]
               },
               {
                 "sourceTag": "scope:admin",
                 "onlyDependOnLibsWithTags": [
-                  "scope:admin"
+                  "scope:admin",
+                  "type:lib"
                 ]
               }
             ]
