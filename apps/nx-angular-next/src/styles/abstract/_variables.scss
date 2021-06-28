@@ -1,4 +1,8 @@
-// TODO Don't forget delete temporary var
-$test-var: #292d68;
+/* test var  */
+// TODO Don't forget remove temporary code
+$test-var: #8a00c2;
 
 $font-open-sans: 'Open Sans', sans-serif;
+/**
+ * Override scope variables => app variables
+ */
