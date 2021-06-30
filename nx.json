@@ -40,7 +40,7 @@
       "implicitDependencies": ["nx-angular-next"]
     },
     "shared-data-access-interfaces": {
-      "tags": []
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
     "ui-component": {
       "tags": ["scope: ui-lib", "type: lib"]
