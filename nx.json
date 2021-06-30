@@ -39,6 +39,9 @@
       "tags": ["scope: nx-angular-next-e2e"],
       "implicitDependencies": ["nx-angular-next"]
     },
+    "shared-data-access-interfaces": {
+      "tags": []
+    },
     "ui-component": {
       "tags": ["scope: ui-lib", "type: lib"]
     }
