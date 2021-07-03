@@ -1,6 +1,11 @@
 module.exports = {
   name: 'API GraphQL Schema',
-  schemaPath: 'schema.graphql',
+  schemaPath: 'api-app.graphql',
+  projects: {
+    api: {
+      includes: ['./users/**/*graphql'],
+    },
+  },
   extensions: {
     endpoints: {
       'Default GraphQL Endpoint': {
