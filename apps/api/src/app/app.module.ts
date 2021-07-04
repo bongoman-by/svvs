@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { environment } from '../environments/environment';
 import { resolverMap } from './app.resolver';
 import { UserEntity } from './users/entities/user.entities';
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -18,6 +20,8 @@ import { UserEntity } from './users/entities/user.entities';
       playground: true,
       resolvers: [resolverMap],
     }),
+    UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
 })
