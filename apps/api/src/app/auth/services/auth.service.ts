@@ -8,5 +8,6 @@ import {
 export class AuthService {
   async login(signInPayload: ISignAuthPayload): Promise<ISignAuthResponse> {
     return await null;
+    // { accessToken, expiresIn, id };
   }
 }
