@@ -16,9 +16,9 @@ export const environment = {
     synchronize: true,
     logging: true,
     entities: ['dist/apps/api/src/**/*.entity{.ts, .js}'],
-    migrations: ['dist/apps/api/migrations/*{.ts, .js}'],
+    migrations: ['dist/apps/api/src/migrations/*{.ts, .js}'],
     cli: {
-      migrationsDir: 'db/migrations',
+      migrationsDir: 'migrations',
     },
   } as TypeOrmModuleOptions,
 };
