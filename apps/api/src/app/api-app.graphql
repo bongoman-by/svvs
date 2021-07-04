@@ -3,3 +3,7 @@
 scalar Data
 scalar json
 scalar upload
+
+type Query {
+
+}

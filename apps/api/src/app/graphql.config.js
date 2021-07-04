@@ -3,7 +3,7 @@ module.exports = {
   schemaPath: 'api-app.graphql',
   projects: {
     api: {
-      includes: ['./users/**/*graphql'],
+      includes: ['./users/*graphql', './auth/*graphql'],
     },
   },
   extensions: {
