@@ -1,5 +1,5 @@
 import { Query, Resolver } from '@nestjs/graphql';
-import {
+import type {
   ISignAuthPayload,
   ISignAuthResponse,
 } from '@svvs/shared/data-access/interfaces';
