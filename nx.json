@@ -18,6 +18,7 @@
       }
     }
   },
+
   "projects": {
     "admin": {
       "tags": ["scope: admin", "type: app"]

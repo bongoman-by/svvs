@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { environment } from '../environments/environment';
 import { resolverMap } from './app.resolver';
-import { UserEntity } from './users/entities/user.entities';
+import { UserEntity } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 @Module({

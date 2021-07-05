@@ -5,7 +5,7 @@ import {
   ISignAuthResponse,
 } from '@svvs/shared/data-access/interfaces';
 import { environment } from '../../../environments/environment';
-import { UserEntity } from '../../users/entities/user.entities';
+import { UserEntity } from '../../users/entities/user.entity';
 import { UserService } from '../../users/services/user.service';
 import { PasswordService } from './password.service';
 

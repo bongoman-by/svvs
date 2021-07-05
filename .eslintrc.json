@@ -72,6 +72,18 @@
                 "onlyDependOnLibsWithTags": [
                   "lib-type:utils"
                 ]
+              },
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": [
+                  "*"
+                ]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": [
+                  "type:util"
+                ]
               }
             ]
           }
