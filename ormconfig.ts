@@ -1,6 +1,6 @@
 export default {
-  type: process.env.DB_TYPE,
   host: process.env.DB_HOST,
+  type: process.env.DB_TYPE,
   port: Number(process.env.DB_PORT),
   username: process.env.DB_USER_NAME,
   password: process.env.DB_USER_PASSWORD,
