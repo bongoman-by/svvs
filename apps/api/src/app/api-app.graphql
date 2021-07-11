@@ -1,0 +1,7 @@
+# Declare common scalar type
+
+scalar Date
+scalar JSON
+scalar upload
+
+type Query

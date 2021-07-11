@@ -1,6 +1,10 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 export const environment = {
   production: false,
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: Number(process.env.JWT_EXPIRES_IN),
+  },
   connection: {
     type: process.env.DB_TYPE as 'aurora-data-api',
     host: process.env.DB_HOST,
@@ -11,10 +15,5 @@ export const environment = {
     dropSchema: false,
     synchronize: true,
     logging: true,
-    entities: ['dist/apps/api/src/**/*.entity{.ts, .js}'],
-    migrations: ['dist/apps/api/migrations/*{.ts, .js}'],
-    cli: {
-      migrationsDir: 'db/migrations',
-    },
   } as TypeOrmModuleOptions,
 };

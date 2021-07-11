@@ -1,0 +1,15 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5433,
+  "username": "postgres",
+  "password": "123456",
+  "database": "SVVS_DB",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["dist/apps/api/src/**/*.entity.js"],
+  "migrations": ["dist/apps/api/src/migrations/*.js"],
+  "cli": {
+    "migrationsDir": "dist/apps/api/src/migrations"
+  }
+}

@@ -18,6 +18,7 @@
       }
     }
   },
+
   "projects": {
     "admin": {
       "tags": ["scope: admin", "type: app"]
@@ -38,6 +39,9 @@
     "nx-angular-next-e2e": {
       "tags": ["scope: nx-angular-next-e2e"],
       "implicitDependencies": ["nx-angular-next"]
+    },
+    "shared-data-access-interfaces": {
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
     "ui-component": {
       "tags": ["scope: ui-lib", "type: lib"]
