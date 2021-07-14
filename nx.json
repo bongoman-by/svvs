@@ -1,7 +1,7 @@
 {
   "npmScope": "svvs",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "HEAD"
   },
   "implicitDependencies": {
     "package.json": {
