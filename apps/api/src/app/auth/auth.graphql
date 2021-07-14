@@ -1,4 +1,5 @@
 extend type Query {
+  "It's login query demo description"
   login(username: String!, password: String!): SignInResponse
   logout: Boolean
 }
