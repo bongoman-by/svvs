@@ -12,7 +12,7 @@
           "options": {
             "commands": [
               {
-                "command": "mkdir docs-temp; cp readme.md ./docs-temp/; cp ./apps/admin/docs/readme.md ./; npx @compodoc/compodoc -p apps/admin/tsconfig.compodoc.json --theme vagrant -r 8085 -d docs/admin/; rm readme.md; cp ./docs-temp/readme.md ./; rm ./docs-temp/readme.md; rmdir docs-temp"
+                "command": "mkdir docs-temp; cp README.md ./docs-temp/; cp ./apps/admin/docs/README.md ./; npx @compodoc/compodoc -p apps/admin/tsconfig.compodoc.json --theme vagrant -r 8085 -d docs/admin/; rm README.md; cp ./docs-temp/README.md ./; rm ./docs-temp/README.md; rmdir docs-temp"
               }
             ]
           }
@@ -144,7 +144,7 @@
           "options": {
             "commands": [
               {
-                "command": "mkdir docs-temp; cp readme.md ./docs-temp/; cp ./apps/api/docs/readme.md ./; npx @compodoc/compodoc -p apps/api/tsconfig.app.json --theme vagrant -r 8085 -d docs/api/; rm readme.md; cp ./docs-temp/readme.md ./; rm ./docs-temp/readme.md; rmdir docs-temp"
+                "command": "mkdir docs-temp; cp README.md ./docs-temp/; cp ./apps/api/docs/README.md ./; npx @compodoc/compodoc -p apps/api/tsconfig.app.json --theme vagrant -r 8085 -d docs/api/; rm README.md; cp ./docs-temp/README.md ./; rm ./docs-temp/README.md; rmdir docs-temp"
               }
             ]
           }
@@ -218,7 +218,7 @@
           "options": {
             "commands": [
               {
-                "command": "mkdir docs-temp; cp readme.md ./docs-temp/; cp ./apps/nx-angular-next/docs/readme.md ./; npx @compodoc/compodoc -p apps/nx-angular-next/tsconfig.compodoc.json --theme vagrant -r 8085 -d docs/nx-angular-next/; rm readme.md; cp ./docs-temp/readme.md ./; rm ./docs-temp/readme.md; rmdir docs-temp"
+                "command": "mkdir docs-temp; cp README.md ./docs-temp/; cp ./apps/nx-angular-next/docs/README.md ./; npx @compodoc/compodoc -p apps/nx-angular-next/tsconfig.compodoc.json --theme vagrant -r 8085 -d docs/nx-angular-next/; rm README.md; cp ./docs-temp/README.md ./; rm ./docs-temp/README.md; rmdir docs-temp"
               }
             ]
           }
