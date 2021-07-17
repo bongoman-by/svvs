@@ -1,8 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
+    "outDir": "../../../dist/out-tsc",
     "types": [
       "node"
     ],
@@ -11,6 +10,7 @@
   },
   "exclude": [
     "**/*.spec.ts",
+    "src/migrations/**/*.ts",
     "src/environments/**/*.ts"
   ],
   "include": [

@@ -1,3 +1,5 @@
+[![documentation](https://github.com/bongoman-by/svvs/actions/workflows/generateDocs.yml/badge.svg)](https://github.com/bongoman-by/svvs/actions/workflows/generateDocs.yml)
+
 ## Documentation
 
 [api](https://bongoman-by.github.io/svvs/api/)
