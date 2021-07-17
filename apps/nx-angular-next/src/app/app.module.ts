@@ -7,7 +7,7 @@ import { UiComponentModule } from '@svvs/ui-component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, UiComponentModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), UiComponentModule],
   providers: [],
   bootstrap: [AppComponent],
 })
