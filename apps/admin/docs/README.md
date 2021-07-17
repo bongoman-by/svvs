@@ -1,3 +1,8 @@
+<!--suppress HtmlDeprecatedAttribute -->
+<p align="center">
+<img src="https://github.com/bongoman-by/svvs/blob/main/images/logo.png" width="150" alt="logo svvs">
+</p>
+
 #
 
 [![documentation](https://github.com/bongoman-by/svvs/actions/workflows/generateDocs.yml/badge.svg)](https://github.com/bongoman-by/svvs/actions/workflows/generateDocs.yml)
