@@ -15,4 +15,4 @@ import { StoreRouterStateSerializer } from './services/store-router-state-serial
     }),
   ],
 })
-export class RootStoreModule {}
+export class FrontendSharedDataAccessRootStoreModule {}

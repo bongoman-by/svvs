@@ -1,6 +1,6 @@
 module.exports = {
   displayName: 'nx-angular-next-data-access-store',
-  preset: '../../../../jest.preset.js',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../coverage/libs/nx-angular-next/data-access/store',
+    '../../../../../coverage/libs/frontend/shared/data-access/root-store',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

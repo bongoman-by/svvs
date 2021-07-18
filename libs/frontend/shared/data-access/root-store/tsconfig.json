@@ -1,5 +1,5 @@
 {
-  "extends": "../../../../tsconfig.base.json",
+  "extends": "../../../../../tsconfig.base.json",
   "files": [],
   "include": [],
   "references": [
@@ -15,7 +15,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": false,
+    "strictNullChecks": false
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

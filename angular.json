@@ -207,6 +207,31 @@
         }
       }
     },
+    "frontend-shared-data-access-root-store": {
+      "projectType": "library",
+      "root": "libs/frontend/shared/data-access/root-store",
+      "sourceRoot": "libs/frontend/shared/data-access/root-store/src",
+      "prefix": "svvs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/shared/data-access/root-store"],
+          "options": {
+            "jestConfig": "libs/frontend/shared/data-access/root-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/shared/data-access/root-store/src/**/*.ts",
+              "libs/frontend/shared/data-access/root-store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "nx-angular-next": {
       "projectType": "application",
       "root": "apps/nx-angular-next",
@@ -374,31 +399,6 @@
             }
           },
           "defaultConfiguration": "production"
-        }
-      }
-    },
-    "nx-angular-next-data-access-store": {
-      "projectType": "library",
-      "root": "libs/nx-angular-next/data-access/store",
-      "sourceRoot": "libs/nx-angular-next/data-access/store/src",
-      "prefix": "svvs",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/nx-angular-next/data-access/store"],
-          "options": {
-            "jestConfig": "libs/nx-angular-next/data-access/store/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/nx-angular-next/data-access/store/src/**/*.ts",
-              "libs/nx-angular-next/data-access/store/src/**/*.html"
-            ]
-          }
         }
       }
     },
