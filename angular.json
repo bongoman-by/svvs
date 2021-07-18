@@ -227,9 +227,9 @@
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/nx-angular-next",
+            "outputPath": "dist/nx-angular-next/browser",
             "index": "apps/nx-angular-next/src/index.html",
-            "main": "apps/nx-angular-next/src/main.ts",
+            "main": "apps/nx-angular-next/src/main.browser.ts",
             "polyfills": "apps/nx-angular-next/src/polyfills.ts",
             "tsConfig": "apps/nx-angular-next/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -314,6 +314,66 @@
             "jestConfig": "apps/nx-angular-next/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/nx-angular-next/server",
+            "main": "apps/nx-angular-next/server.ts",
+            "tsConfig": "apps/nx-angular-next/tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/nx-angular-next/src/styles"]
+            },
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/nx-angular-next/src/environments/environment.ts",
+                  "with": "apps/nx-angular-next/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "nx-angular-next:build:development",
+              "serverTarget": "nx-angular-next:server:development"
+            },
+            "production": {
+              "browserTarget": "nx-angular-next:build:production",
+              "serverTarget": "nx-angular-next:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": ["/"]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "nx-angular-next:build:production",
+              "serverTarget": "nx-angular-next:server:production"
+            },
+            "development": {
+              "browserTarget": "nx-angular-next:build:development",
+              "serverTarget": "nx-angular-next:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     },
