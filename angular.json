@@ -229,7 +229,7 @@
           "options": {
             "outputPath": "dist/nx-angular-next/browser",
             "index": "apps/nx-angular-next/src/index.html",
-            "main": "apps/nx-angular-next/src/main.ts",
+            "main": "apps/nx-angular-next/src/main.browser.ts",
             "polyfills": "apps/nx-angular-next/src/polyfills.ts",
             "tsConfig": "apps/nx-angular-next/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -322,9 +322,7 @@
             "main": "apps/nx-angular-next/server.ts",
             "tsConfig": "apps/nx-angular-next/tsconfig.server.json",
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "apps/nx-angular-next/src/styles"
-              ]
+              "includePaths": ["apps/nx-angular-next/src/styles"]
             },
             "inlineStyleLanguage": "scss"
           },
@@ -363,9 +361,7 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {

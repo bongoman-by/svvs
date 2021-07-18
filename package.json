@@ -9,6 +9,8 @@
     "client:start": "ng serve nx-angular-next",
     "client:build": "ng build nx-angular-next",
     "client:test": "ng test nx-angular-next",
+    "client:ssr:build": "ng build nx-angular-next --prod && ng run nx-angular-next:server:production",
+    "client:ssr:serve": "node dist/nx-angular-next/server/main.js",
     "admin:start": "ng serve admin",
     "admin:build": "ng build admin",
     "admin:test": "ng test admin",
