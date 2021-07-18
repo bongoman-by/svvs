@@ -18,7 +18,6 @@
       }
     }
   },
-
   "projects": {
     "admin": {
       "tags": ["scope: admin", "type: app"]
@@ -35,6 +34,9 @@
     },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
+    },
+    "root-store": {
+      "tags": ["scope: nx-angular-nex", "type: lib", "lib-type:data-access"]
     },
     "nx-angular-next-e2e": {
       "tags": ["scope: nx-angular-next-e2e"],

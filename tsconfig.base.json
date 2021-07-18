@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@svvs/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@svvs/nx-angular-next/data-access/store": [
+        "libs/nx-angular-next/data-access/store/src/index.ts"
+      ],
       "@svvs/shared/data-access/interfaces": [
         "libs/shared/data-access/interfaces/src/index.ts"
       ],

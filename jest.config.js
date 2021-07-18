@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/apps/admin',
     '<rootDir>/libs/ui-component',
     '<rootDir>/libs/shared/data-access/interfaces',
+    '<rootDir>/libs/nx-angular-next/data-access/store',
   ],
 };

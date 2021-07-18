@@ -377,6 +377,31 @@
         }
       }
     },
+    "nx-angular-next-data-access-store": {
+      "projectType": "library",
+      "root": "libs/nx-angular-next/data-access/store",
+      "sourceRoot": "libs/nx-angular-next/data-access/store/src",
+      "prefix": "svvs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nx-angular-next/data-access/store"],
+          "options": {
+            "jestConfig": "libs/nx-angular-next/data-access/store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nx-angular-next/data-access/store/src/**/*.ts",
+              "libs/nx-angular-next/data-access/store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "nx-angular-next-e2e": {
       "root": "apps/nx-angular-next-e2e",
       "sourceRoot": "apps/nx-angular-next-e2e/src",
