@@ -35,6 +35,9 @@
     "frontend-shared-data-access-root-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
+    "frontend-shared-data-access-user-store": {
+      "tags": []
+    },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
     },
