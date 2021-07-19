@@ -32,11 +32,11 @@
     "api-interfaces": {
       "tags": []
     },
-    "frontend-shared-data-access-root-store": {
+    "root-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
-    "frontend-shared-data-access-user-store": {
-      "tags": []
+    "user-store": {
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
