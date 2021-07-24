@@ -207,7 +207,7 @@
         }
       }
     },
-    "frontend-shared-data-access-root-store": {
+    "root-store": {
       "projectType": "library",
       "root": "libs/frontend/shared/data-access/root-store",
       "sourceRoot": "libs/frontend/shared/data-access/root-store/src",
