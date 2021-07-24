@@ -3,27 +3,25 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import * as fromUser from './+state/user.reducer';
 import { UserEffects } from './+state/user.effects';
-import { UserFacade } from './+state/user.facade';
+
+import {} from './interfaces/user.interface';
+import { IUsersStoreOptions } from './interfaces/users-store-options.interface';
+import { IUsersApollo } from './interfaces/users-apollo.interface';
+import { IUsersFacade } from './interfaces/users-facade.interface';
 
 @NgModule({
   imports: [
     StoreModule.forFeature(fromUser.USER_FEATURE_KEY, fromUser.reducer),
     EffectsModule.forFeature([UserEffects]),
   ],
-  providers: [UserFacade],
 })
 export class UserStoreModule {
   static forRoot(
-    options: Partial<IUserStoreOptions>
+    options: Partial<IUsersStoreOptions>
   ): ModuleWithProviders<UserStoreModule> {
     return {
       ngModule: UserStoreModule,
       providers: [],
     };
   }
-}
-
-//Todo remove after
-export interface IUserStoreOptions {
-  apollo: string;
 }

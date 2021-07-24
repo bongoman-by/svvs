@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
@@ -10,6 +11,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     AppModule,
     CoreModule,
+    BrowserAnimationsModule,
     !environment.production
       ? StoreDevtoolsModule.instrument({ logOnly: environment.production })
       : [],
