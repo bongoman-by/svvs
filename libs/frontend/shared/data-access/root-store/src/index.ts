@@ -1,1 +1,1 @@
-export * from './lib/frontend-shared-data-access-root-store.module';
+export * from './lib/root-store.module';
