@@ -4,7 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 import {
   ISignAuthPayload,
   ISignAuthResponse,
-} from '@svvs/shared/data-access/interfaces';
+} from '@svvs/shared/utils/interfaces';
 import { environment } from '../../../environments/environment';
 
 import { UserService } from '../../users/services/user.service';

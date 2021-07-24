@@ -6,7 +6,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-import type { IUser } from '@svvs/shared/data-access/interfaces';
+import type { IUser } from '@svvs/shared/utils/interfaces';
 
 /**
  * Entity users provide access to db table users
