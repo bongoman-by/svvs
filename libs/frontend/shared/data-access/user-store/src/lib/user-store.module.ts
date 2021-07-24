@@ -6,12 +6,10 @@ import { UserEffects } from './+state/user.effects';
 
 import {} from './interfaces/user.interface';
 import { IUsersStoreOptions } from './interfaces/users-store-options.interface';
-import { IUsersApollo } from './interfaces/users-apollo.interface';
-import { IUsersFacade } from './interfaces/users-facade.interface';
 
 @NgModule({
   imports: [
-    StoreModule.forFeature(fromUser.USER_FEATURE_KEY, fromUser.reducer),
+    StoreModule.forFeature(fromUser.USERS_FEATURE_KEY, fromUser.reducer),
     EffectsModule.forFeature([UserEffects]),
   ],
 })

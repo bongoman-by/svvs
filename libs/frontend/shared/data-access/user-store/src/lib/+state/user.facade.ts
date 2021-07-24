@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UserActions from './user.actions';
-import * as UserFeature from './user.reducer';
 import * as UserSelectors from './user.selectors';
 
 @Injectable()
