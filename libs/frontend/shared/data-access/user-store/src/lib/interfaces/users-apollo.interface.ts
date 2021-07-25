@@ -1,4 +1,4 @@
-import { IUser, TApolloResponse } from '@svvs/shared/data-access/interfaces';
+import { IUser, TApolloResponse } from '@svvs/shared/utils/interfaces';
 
 /**
  * User Apollo

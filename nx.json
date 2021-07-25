@@ -32,12 +32,6 @@
     "api-interfaces": {
       "tags": []
     },
-    "root-store": {
-      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
-    },
-    "user-store": {
-      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
-    },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
     },
@@ -45,11 +39,20 @@
       "tags": ["scope: nx-angular-next-e2e"],
       "implicitDependencies": ["nx-angular-next"]
     },
-    "shared-data-access-interfaces": {
+    "root-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
+    },
+    "shared-utils-interfaces": {
+      "tags": ["scope: shared", "type: lib", "lib-type:utils"]
+    },
+    "shared-utils-store": {
+      "tags": []
     },
     "ui-component": {
       "tags": ["scope: ui-lib", "type: lib"]
+    },
+    "user-store": {
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     }
   }
 }

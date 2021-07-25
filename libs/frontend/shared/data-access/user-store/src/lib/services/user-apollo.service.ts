@@ -1,0 +1,30 @@
+import { Apollo } from 'apollo-angular';
+
+import { IUsersApollo } from '../interfaces/users-apollo.interface';
+import {
+  extractApolloResponse,
+  IUser,
+  TApolloResponse,
+} from '@svvs/shared/utils/interfaces';
+import * as UserQueries from '../graphql/users.queries';
+import { catchError, map } from 'rxjs/operators';
+import { ApolloError } from '@apollo/client';
+import { throwError } from 'rxjs';
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class UsersApollo implements IUsersApollo {
+  constructor(private apollo: Apollo) {}
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  loadUser(queryParams: Record<string, unknown> = {}): TApolloResponse<IUser> {
+    return this.apollo
+      .query<{ user: IUser }>({ query: UserQueries.usersRequest.query })
+      .pipe(
+        map((result) =>
+          extractApolloResponse(result, UserQueries.usersRequest.keys)
+        ),
+        catchError((error: ApolloError) => throwError(error))
+      );
+  }
+}
