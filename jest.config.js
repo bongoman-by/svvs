@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/nx-angular-next/data-access/store',
     '<rootDir>/libs/frontend/shared/data-access/user-store',
     '<rootDir>/libs/shared/utils/store',
+    '<rootDir>/libs/shared/utils/storage',
   ],
 };
