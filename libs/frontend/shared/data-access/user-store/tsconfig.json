@@ -15,7 +15,8 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "strictFunctionTypes": false
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
