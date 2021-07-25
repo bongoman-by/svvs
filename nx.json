@@ -45,8 +45,11 @@
     "shared-utils-interfaces": {
       "tags": ["scope: shared", "type: lib", "lib-type:utils"]
     },
+    "shared-utils-storage": {
+      "tags": ["scope: shared", "type: lib", "lib-type:utils"]
+    },
     "shared-utils-store": {
-      "tags": []
+      "tags": ["scope: shared", "type: lib", "lib-type:utils"]
     },
     "ui-component": {
       "tags": ["scope: ui-lib", "type: lib"]
