@@ -18,7 +18,7 @@ const usersReducer = createReducer(
     user: payload,
     userLoadRun: false,
   })),
-  on(UserActions.loadUserFailture, (state, { payload }) => ({
+  on(UserActions.loadUserFailure, (state, { payload }) => ({
     ...state,
     userLoadRun: false,
     userLoadFailure: payload,

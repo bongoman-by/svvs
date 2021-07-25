@@ -11,7 +11,7 @@ export const loadUserSuccess = createAction(
   '[Users] Load User Success',
   payload<IUser>()
 );
-export const loadUserFailture = createAction(
+export const loadUserFailure = createAction(
   '[Users] Load User Failure',
   payload<ApolloError>()
 );
