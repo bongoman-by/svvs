@@ -8,6 +8,8 @@ import {} from './interfaces/user.interface';
 import { IUsersStoreOptions } from './interfaces/users-store-options.interface';
 import { IUsersApollo } from './interfaces/users-apollo.interface';
 import { IUsersFacade } from './interfaces/users-facade.interface';
+import { UsersApollo } from './services/user-apollo.service';
+import { BaseUsersFacade } from './+state/user.facade';
 
 @NgModule({
   imports: [
@@ -24,11 +26,11 @@ export class UserStoreModule {
       providers: [
         {
           provide: IUsersApollo,
-          useClass: options.apollo,
+          useClass: options.apollo || UsersApollo,
         },
         {
           provide: IUsersFacade,
-          useClass: options.facade,
+          useClass: options.facade || BaseUsersFacade,
         },
       ],
     };
