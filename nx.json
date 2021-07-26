@@ -32,6 +32,9 @@
     "api-interfaces": {
       "tags": []
     },
+    "frontend-shared-data-access-auth-store": {
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
+    },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
     },
