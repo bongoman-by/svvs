@@ -13,7 +13,7 @@ import { throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class UsersApollo implements IUsersApollo {
+export class BaseUsersApollo implements IUsersApollo {
   constructor(private apollo: Apollo) {}
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
