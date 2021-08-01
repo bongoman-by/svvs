@@ -28,5 +28,5 @@ export abstract class IAuthApollo {
    */
   abstract signOut(
     queryParams?: Record<string, unknown>
-  ): TApolloResponse<void>;
+  ): TApolloResponse<void | null>;
 }
