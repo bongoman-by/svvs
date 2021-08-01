@@ -17,6 +17,15 @@
     "baseUrl": ".",
     "paths": {
       "@svvs/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@svvs/frontend/client/feature/auth": [
+        "libs/frontend/client/feature/auth/src/index.ts"
+      ],
+      "@svvs/frontend/client/feature/home": [
+        "libs/frontend/client/feature/home/src/index.ts"
+      ],
+      "@svvs/frontend/client/feature/user-profile": [
+        "libs/frontend/client/feature/user-profile/src/index.ts"
+      ],
       "@svvs/frontend/shared/data-access/auth-store": [
         "libs/frontend/shared/data-access/auth-store/src/index.ts"
       ],

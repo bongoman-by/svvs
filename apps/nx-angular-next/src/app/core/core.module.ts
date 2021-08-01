@@ -3,23 +3,20 @@ import { NgModule } from '@angular/core';
 import { HttpLink } from 'apollo-angular/http';
 import { APOLLO_OPTIONS } from 'apollo-angular';
 import { RouterModule } from '@angular/router';
-import { EffectsModule } from '@ngrx/effects';
 
 import { createApollo } from './utils/create-apollo';
 import { RootStoreModule } from '@svvs/frontend/shared/data-access/root-store';
-import { AppComponent } from './components/app/app.component';
-import { AuthStoreModule } from '@svvs/frontend/shared/data-access/auth-store';
-import { UsersStoreModule } from '@svvs/frontend/shared/data-access/user-store';
+import { coreContainers, corRoutes } from './core.common';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [coreContainers],
   imports: [
     NxModule.forRoot(),
     RootStoreModule,
-    UsersStoreModule.forRoot(),
-    AuthStoreModule.forRoot(),
-    EffectsModule.forRoot([]),
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(corRoutes, {
+      initialNavigation: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    }),
   ],
   providers: [
     {
