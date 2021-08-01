@@ -1,32 +1,33 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import * as fromUser from './+state/user.reducer';
-import { UsersEffects } from './+state/user.effects';
 
-import {} from './interfaces/user.interface';
+import * as fromUser from './+state/users.reducer';
+import { UsersEffects } from './+state/users.effects';
 import { IUsersStoreOptions } from './interfaces/users-store-options.interface';
 import { IUsersApollo } from './interfaces/users-apollo.interface';
 import { IUsersFacade } from './interfaces/users-facade.interface';
-import { UsersApollo } from './services/user-apollo.service';
-import { BaseUsersFacade } from './+state/user.facade';
+import { BaseUsersFacade } from './services/base-users-facade.service';
+import { BaseUsersApollo } from './services/base-user-apollo.service';
 
 @NgModule({
   imports: [
+    CommonModule,
     StoreModule.forFeature(fromUser.USERS_FEATURE_KEY, fromUser.reducer),
     EffectsModule.forFeature([UsersEffects]),
   ],
 })
-export class UserStoreModule {
+export class UsersStoreModule {
   static forRoot(
-    options: Partial<IUsersStoreOptions>
-  ): ModuleWithProviders<UserStoreModule> {
+    options: Partial<IUsersStoreOptions> = {}
+  ): ModuleWithProviders<UsersStoreModule> {
     return {
-      ngModule: UserStoreModule,
+      ngModule: UsersStoreModule,
       providers: [
         {
           provide: IUsersApollo,
-          useClass: options.apollo || UsersApollo,
+          useClass: options.apollo || BaseUsersApollo,
         },
         {
           provide: IUsersFacade,

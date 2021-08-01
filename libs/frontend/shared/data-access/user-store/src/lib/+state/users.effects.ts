@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { DataPersistence } from '@nrwl/angular';
@@ -13,7 +14,7 @@ import {
 import { AbstractEffects } from '@svvs/shared/utils/store';
 
 import { IUsersApollo } from '../interfaces/users-apollo.interface';
-import { USERS_FEATURE_KEY } from './user.reducer';
+import { USERS_FEATURE_KEY } from './users.reducer';
 import * as UserActions from './users.actions';
 import { IUsersStoreFeatureKey } from '../interfaces/users-store-feature-key.interface';
 import { IUsersState } from '../interfaces/users-state.interface';
@@ -36,7 +37,7 @@ export class UsersEffects extends AbstractEffects<IUsersState> {
 
   loadUserRun$ = createEffect(() =>
     this.dataPersistence.fetch(UserActions.loadUserRun, {
-      run: (action) =>
+      run: () =>
         this.userApollo.loadUser().pipe(
           map<IUser, Action>((payload) =>
             UserActions.loadUserSuccess({ payload })

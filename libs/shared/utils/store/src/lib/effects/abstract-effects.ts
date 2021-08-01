@@ -39,6 +39,8 @@ export abstract class AbstractEffects<T> {
     if (responseAction()) {
       return responseAction({ payload: error });
     }
+
+    return null;
   }
 
   protected constructor(protected readonly key: string) {}
