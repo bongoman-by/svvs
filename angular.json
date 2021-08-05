@@ -232,6 +232,31 @@
         }
       }
     },
+    "frontend-client-feature-home": {
+      "projectType": "library",
+      "root": "libs/frontend/client/feature/home",
+      "sourceRoot": "libs/frontend/client/feature/home/src",
+      "prefix": "svvs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/client/feature/home"],
+          "options": {
+            "jestConfig": "libs/frontend/client/feature/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/client/feature/home/src/**/*.ts",
+              "libs/frontend/client/feature/home/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-client-feature-user-profile": {
       "projectType": "library",
       "root": "libs/frontend/client/feature/user-profile",
@@ -282,17 +307,17 @@
         }
       }
     },
-    "frontend-client-feature-home": {
+    "frontend-ui-components": {
       "projectType": "library",
-      "root": "libs/frontend/client/feature/home",
-      "sourceRoot": "libs/frontend/client/feature/home/src",
+      "root": "libs/frontend/ui/components",
+      "sourceRoot": "libs/frontend/ui/components/src",
       "prefix": "svvs",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/frontend/client/feature/home"],
+          "outputs": ["coverage/libs/frontend/ui/components"],
           "options": {
-            "jestConfig": "libs/frontend/client/feature/home/jest.config.js",
+            "jestConfig": "libs/frontend/ui/components/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -300,8 +325,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/frontend/client/feature/home/src/**/*.ts",
-              "libs/frontend/client/feature/home/src/**/*.html"
+              "libs/frontend/ui/components/src/**/*.ts",
+              "libs/frontend/ui/components/src/**/*.html"
             ]
           }
         }
