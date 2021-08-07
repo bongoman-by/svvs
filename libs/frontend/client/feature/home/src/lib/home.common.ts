@@ -1,6 +1,6 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { BaseLayoutUiComponent } from '@svvs/frontend/ui/components';
-import { HomePageUiComponent } from './home-page-ui/home-page-ui.component';
+import { HomePageBlockComponent } from './home-page-block/home-page-block.component';
 import { Routes } from '@angular/router';
 
 export const homeRoutes: Routes = [
@@ -10,7 +10,7 @@ export const homeRoutes: Routes = [
     children: [
       {
         path: '',
-        component: HomePageUiComponent,
+        component: HomePageBlockComponent,
       },
       {
         path: 'auth',
@@ -31,4 +31,4 @@ export const homeRoutes: Routes = [
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const homeContainers: any[] = [HomePageUiComponent];
+export const homeContainers: any[] = [HomePageBlockComponent];
