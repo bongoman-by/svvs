@@ -1,6 +1,5 @@
-import { PLATFORM_ID } from '@angular/core';
-import { gql } from 'apollo-angular';
 import { IApolloRequest } from '@svvs/shared/utils/interfaces';
+import { gql } from 'apollo-angular';
 
 export const loginRequest: IApolloRequest = {
   keys: ['login'],
@@ -20,7 +19,6 @@ export const logoutRequest: IApolloRequest = {
   query: gql`
     query {
       logout
-      }
     }
   `,
 };
