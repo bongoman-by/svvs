@@ -1,5 +1,5 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { BaseLayoutUiComponent } from '@svvs/frontend/ui/components';
+import { BaseLayoutUiComponent } from '@svvs/frontend/client/ui/layout';
 import { HomePageBlockComponent } from './home-page-block/home-page-block.component';
 import { Routes } from '@angular/router';
 

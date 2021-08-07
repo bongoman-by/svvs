@@ -29,9 +29,6 @@
     "api": {
       "tags": ["scope: api", "type: app"]
     },
-    "api-interfaces": {
-      "tags": []
-    },
     "frontend-client-feature-auth": {
       "tags": ["scope: frontend-client", "type: lib", "lib-type:feature"]
     },
@@ -44,8 +41,8 @@
     "frontend-shared-data-access-auth-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
-    "frontend-ui-components": {
-      "tags": ["scope: shared", "type: lib", "lib-type:ui"]
+    "frontend-client-ui-layout": {
+      "tags": ["type:lib", "scope:frontend-client", "lib-type:ui"]
     },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
@@ -65,9 +62,6 @@
     },
     "shared-utils-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:utils"]
-    },
-    "ui-component": {
-      "tags": ["scope: ui-lib", "type: lib"]
     },
     "user-store": {
       "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
