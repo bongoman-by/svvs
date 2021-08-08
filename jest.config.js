@@ -14,5 +14,6 @@ module.exports = {
     '<rootDir>/libs/frontend/client/feature/user-profile',
     '<rootDir>/libs/frontend/client/ui/layout',
     '<rootDir>/libs/frontend/client/ui/user-profile',
+    '<rootDir>/libs/frontend/client/ui/login-form',
   ],
 };
