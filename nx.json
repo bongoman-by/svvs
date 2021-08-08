@@ -38,11 +38,14 @@
     "frontend-client-feature-user-profile": {
       "tags": ["scope: frontend-client", "type: lib", "lib-type:feature"]
     },
-    "frontend-shared-data-access-auth-store": {
-      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
-    },
     "frontend-client-ui-layout": {
       "tags": ["type:lib", "scope:frontend-client", "lib-type:ui"]
+    },
+    "frontend-client-ui-user-profile": {
+      "tags": ["type:lib", "scope:frontend-client", "lib-type:ui"]
+    },
+    "frontend-shared-data-access-auth-store": {
+      "tags": ["scope: shared", "type: lib", "lib-type:data-access"]
     },
     "nx-angular-next": {
       "tags": ["scope: nx-angular-next", "type: app"]
