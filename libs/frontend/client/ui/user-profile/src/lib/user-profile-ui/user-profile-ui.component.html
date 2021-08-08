@@ -1,1 +1,7 @@
-<p>user-profile-ui works!</p>
+<ng-container *ngIf="failure">
+  <p *ngIf="failure.message === 'Unauthorized'">Авторизуйтесь пожалуйста</p>
+</ng-container>
+
+<ng-container *ngIf="user">
+  <p>User: {{user.nickname}} is find</p>
+</ng-container>

@@ -8,8 +8,7 @@ import { IUsersFacade } from '@svvs/frontend/shared/data-access/user-store';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserProfileBlockComponent {
-  user$ = this.userFacade.user$;
-  constructor(private userFacade: IUsersFacade) {
+  constructor(public userFacade: IUsersFacade) {
     this.userFacade.loadUser();
   }
 }

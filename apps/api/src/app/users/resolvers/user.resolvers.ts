@@ -22,7 +22,7 @@ export class UserResolver {
    * @param user provides the user as a candidate for search in userRepository
    */
   @Query('user')
-  // @UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   async whoIam(@CurrentUser() user: UserEntity) {
     return await this.userService.findOneById(user.id);
   }
