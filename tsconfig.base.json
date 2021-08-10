@@ -10,13 +10,18 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "ES2020",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["ESNext", "dom", "ESNext.AsyncIterable"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ESNext",
+      "dom",
+      "ESNext.AsyncIterable"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@svvs/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@svvs/frontend/client/feature/auth": [
         "libs/frontend/client/feature/auth/src/index.ts"
       ],
@@ -25,6 +30,15 @@
       ],
       "@svvs/frontend/client/feature/user-profile": [
         "libs/frontend/client/feature/user-profile/src/index.ts"
+      ],
+      "@svvs/frontend/client/ui/layout": [
+        "libs/frontend/client/ui/layout/src/index.ts"
+      ],
+      "@svvs/frontend/client/ui/login-form": [
+        "libs/frontend/client/ui/login-form/src/index.ts"
+      ],
+      "@svvs/frontend/client/ui/user-profile": [
+        "libs/frontend/client/ui/user-profile/src/index.ts"
       ],
       "@svvs/frontend/shared/data-access/auth-store": [
         "libs/frontend/shared/data-access/auth-store/src/index.ts"
@@ -35,17 +49,20 @@
       "@svvs/frontend/shared/data-access/user-store": [
         "libs/frontend/shared/data-access/user-store/src/index.ts"
       ],
-      "@svvs/frontend/ui/components": [
-        "libs/frontend/ui/components/src/index.ts"
-      ],
       "@svvs/shared/utils/interfaces": [
         "libs/shared/utils/interfaces/src/index.ts",
         "libs/shared/storage/interfaces/src/index.ts"
       ],
-      "@svvs/shared/utils/storage": ["libs/shared/utils/storage/src/index.ts"],
-      "@svvs/shared/utils/store": ["libs/shared/utils/store/src/index.ts"],
-      "@svvs/ui-component": ["libs/ui-component/src/index.ts"]
+      "@svvs/shared/utils/storage": [
+        "libs/shared/utils/storage/src/index.ts"
+      ],
+      "@svvs/shared/utils/store": [
+        "libs/shared/utils/store/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

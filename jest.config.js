@@ -3,7 +3,6 @@ module.exports = {
     '<rootDir>/apps/nx-angular-next',
     '<rootDir>/apps/api',
     '<rootDir>/apps/admin',
-    '<rootDir>/libs/ui-component',
     '<rootDir>/libs/shared/data-access/interfaces',
     '<rootDir>/libs/nx-angular-next/data-access/store',
     '<rootDir>/libs/frontend/shared/data-access/user-store',
@@ -13,6 +12,8 @@ module.exports = {
     '<rootDir>/libs/frontend/client/feature/home',
     '<rootDir>/libs/frontend/client/feature/auth',
     '<rootDir>/libs/frontend/client/feature/user-profile',
-    '<rootDir>/libs/frontend/ui/components',
+    '<rootDir>/libs/frontend/client/ui/layout',
+    '<rootDir>/libs/frontend/client/ui/user-profile',
+    '<rootDir>/libs/frontend/client/ui/login-form',
   ],
 };

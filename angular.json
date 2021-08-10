@@ -194,19 +194,6 @@
         }
       }
     },
-    "api-interfaces": {
-      "root": "libs/api-interfaces",
-      "sourceRoot": "libs/api-interfaces/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
-          }
-        }
-      }
-    },
     "frontend-client-feature-auth": {
       "projectType": "library",
       "root": "libs/frontend/client/feature/auth",
@@ -282,6 +269,81 @@
         }
       }
     },
+    "frontend-client-ui-layout": {
+      "projectType": "library",
+      "root": "libs/frontend/client/ui/layout",
+      "sourceRoot": "libs/frontend/client/ui/layout/src",
+      "prefix": "svvs",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/client/ui/layout/src/**/*.ts",
+              "libs/frontend/client/ui/layout/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/client/ui/layout"],
+          "options": {
+            "jestConfig": "libs/frontend/client/ui/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "frontend-client-ui-login-form": {
+      "projectType": "library",
+      "root": "libs/frontend/client/ui/login-form",
+      "sourceRoot": "libs/frontend/client/ui/login-form/src",
+      "prefix": "svvs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/client/ui/login-form"],
+          "options": {
+            "jestConfig": "libs/frontend/client/ui/login-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/client/ui/login-form/src/**/*.ts",
+              "libs/frontend/client/ui/login-form/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "frontend-client-ui-user-profile": {
+      "projectType": "library",
+      "root": "libs/frontend/client/ui/user-profile",
+      "sourceRoot": "libs/frontend/client/ui/user-profile/src",
+      "prefix": "svvs",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend/client/ui/user-profile"],
+          "options": {
+            "jestConfig": "libs/frontend/client/ui/user-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend/client/ui/user-profile/src/**/*.ts",
+              "libs/frontend/client/ui/user-profile/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-shared-data-access-auth-store": {
       "projectType": "library",
       "root": "libs/frontend/shared/data-access/auth-store",
@@ -302,31 +364,6 @@
             "lintFilePatterns": [
               "libs/frontend/shared/data-access/auth-store/src/**/*.ts",
               "libs/frontend/shared/data-access/auth-store/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "frontend-ui-components": {
-      "projectType": "library",
-      "root": "libs/frontend/ui/components",
-      "sourceRoot": "libs/frontend/ui/components/src",
-      "prefix": "svvs",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/frontend/ui/components"],
-          "options": {
-            "jestConfig": "libs/frontend/ui/components/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/frontend/ui/components/src/**/*.ts",
-              "libs/frontend/ui/components/src/**/*.html"
             ]
           }
         }
@@ -627,38 +664,6 @@
           "options": {
             "jestConfig": "libs/shared/utils/store/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "ui-component": {
-      "projectType": "library",
-      "root": "libs/ui-component",
-      "sourceRoot": "libs/ui-component/src",
-      "prefix": "svvs",
-      "architect": {
-        "build": {
-          "options": {
-            "stylePreprocessorOptions": {
-              "includePaths": ["ws-style"]
-            }
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ui-component"],
-          "options": {
-            "jestConfig": "libs/ui-component/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/ui-component/src/**/*.ts",
-              "libs/ui-component/src/**/*.html"
-            ]
           }
         }
       }
