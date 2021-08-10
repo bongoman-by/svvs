@@ -10,8 +10,14 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "ES2020",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["ESNext", "dom", "ESNext.AsyncIterable"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ESNext",
+      "dom",
+      "ESNext.AsyncIterable"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -47,9 +53,16 @@
         "libs/shared/utils/interfaces/src/index.ts",
         "libs/shared/storage/interfaces/src/index.ts"
       ],
-      "@svvs/shared/utils/storage": ["libs/shared/utils/storage/src/index.ts"],
-      "@svvs/shared/utils/store": ["libs/shared/utils/store/src/index.ts"]
+      "@svvs/shared/utils/storage": [
+        "libs/shared/utils/storage/src/index.ts"
+      ],
+      "@svvs/shared/utils/store": [
+        "libs/shared/utils/store/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
