@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IAuthFacade } from '@svvs/frontend/shared/data-access/auth-store';
-import { ISignAuthPayload } from '@svvs/shared/utils/interfaces';
 
 @Component({
   selector: 'svvs-auth-ui',
@@ -11,9 +10,13 @@ import { ISignAuthPayload } from '@svvs/shared/utils/interfaces';
 export class AuthBlockComponent {
   constructor(public authFacade: IAuthFacade) {}
 
-  onLogin(loginPayload: ISignAuthPayload): void {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onLogin(loginPayload: any): void {
     console.log('login in login block', loginPayload);
-    this.authFacade.signInSet(loginPayload);
-    // this.authFacade.signIn();
+    this.authFacade.signInSet({
+      username: loginPayload.login,
+      password: loginPayload.password,
+    });
+    this.authFacade.signIn();
   }
 }
