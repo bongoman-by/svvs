@@ -1,7 +1,8 @@
+import { Routes } from '@angular/router';
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
+import { AuthBlockComponent } from '@svvs/frontend/client/feature/auth';
 import { LayoutUiComponent } from '@svvs/frontend/client/ui/layout';
 import { HomePageBlockComponent } from './home-page-block/home-page-block.component';
-import { Routes } from '@angular/router';
 
 export const homeRoutes: Routes = [
   {
@@ -14,10 +15,7 @@ export const homeRoutes: Routes = [
       },
       {
         path: 'auth',
-        loadChildren: () =>
-          import('@svvs/frontend/client/feature/auth').then(
-            (m) => m.AuthModule
-          ),
+        component: AuthBlockComponent,
       },
       {
         path: 'user-profile',

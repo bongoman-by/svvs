@@ -20,6 +20,9 @@
     ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
       "@svvs/frontend/client/feature/auth": [

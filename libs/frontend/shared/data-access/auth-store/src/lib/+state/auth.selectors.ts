@@ -1,36 +1,24 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { AUTH_FEATURE_KEY, State, authAdapter } from './auth.reducer';
 
-// Lookup the 'Auth' feature state managed by NgRx
-export const getAuthState = createFeatureSelector<State>(AUTH_FEATURE_KEY);
+import { IAuthState } from '../interfaces/auth-state.interface';
+import { AUTH_FEATURE_KEY } from './auth.reducer';
 
-const { selectAll, selectEntities } = authAdapter.getSelectors();
+export const getAuthState = createFeatureSelector<IAuthState>(AUTH_FEATURE_KEY);
 
-export const getAuthLoaded = createSelector(
+export const getSignIn = createSelector(getAuthState, (state) => state.signIn);
+export const getSignInRun = createSelector(
   getAuthState,
-  (state: State) => state.loaded
+  (state) => state.signInRun
 );
-
-export const getAuthError = createSelector(
+export const getSignInFailure = createSelector(
   getAuthState,
-  (state: State) => state.error
+  (state) => state.signInError
 );
-
-export const getAllAuth = createSelector(getAuthState, (state: State) =>
-  selectAll(state)
-);
-
-export const getAuthEntities = createSelector(getAuthState, (state: State) =>
-  selectEntities(state)
-);
-
-export const getSelectedId = createSelector(
+export const getSignOutRun = createSelector(
   getAuthState,
-  (state: State) => state.selectedId
+  (state) => state.signOutRun
 );
-
-export const getSelected = createSelector(
-  getAuthEntities,
-  getSelectedId,
-  (entities, selectedId) => (selectedId ? entities[selectedId] : undefined)
+export const getSignOutFailure = createSelector(
+  getAuthState,
+  (state) => state.signOutError
 );

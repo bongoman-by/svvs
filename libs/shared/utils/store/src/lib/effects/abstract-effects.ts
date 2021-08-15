@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 import { TypedAction } from '@ngrx/store/src/models';
+import { md5 } from '../utils/md5.util';
 
 /**
  * Abstract effect
@@ -15,6 +16,16 @@ export abstract class AbstractEffects<T> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getState<S = T>(state: any, key?: string): S {
     return state[key || this.key];
+  }
+
+  /**
+   * Create id from payload
+   *
+   * @param payload
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getEffectIdFromPayload(payload: any): string {
+    return md5(JSON.stringify(payload));
   }
 
   /**
