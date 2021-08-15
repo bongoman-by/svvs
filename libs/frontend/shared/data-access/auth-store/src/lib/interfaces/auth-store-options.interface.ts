@@ -8,7 +8,7 @@ import { IAuthFacade } from './auth-facade.interface';
  */
 export interface IAuthStoreOptions {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  fasade: Type<IAuthFacade>;
+  facade: Type<IAuthFacade>;
 
   /**
    * Auth Apollo
